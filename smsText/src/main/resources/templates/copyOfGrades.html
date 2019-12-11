@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Grades</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+header {
+	background-color: #666;
+	padding: 30px;
+	text-align: left;
+	font-size: 35px;
+	color: white;
+}
+nav {
+	float: left;
+	width: 25%;
+	height: 500px;
+	background: #ccc;
+	padding: 20px;
+}
+nav ul {
+	list-style-type: none;
+	padding: 0;
+}
+article {
+	float: left;
+	padding: 20px;
+	width: 70%;
+	background-color: #f1f1f1;
+	height: 300px;
+}
+section:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+footer {
+	background-color: #777;
+	padding: 10px;
+	text-align: center;
+	color: white;
+}
+@media ( max-width : 600px) {
+	nav, article {
+		width: 100%;
+		height: auto;
+	}
+}
+table {
+	border-collapse: collapse;
+	width: 70%;
+	height: 350px;
+}
+th, td {
+	text-align: left;
+	padding: 8px;
+}
+tr:nth-child(even) {
+	background-color: #f2f2f2
+}
+th {
+	background-color: #4CAF50;
+	color: white;
+}
+.button {
+	background-color: #4CAF50;
+	border: none;
+	color: white;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	margin: 4px 2px;
+	cursor: pointer;
+}
+a {
+	font-size: 30px;
+	padding-bottom: 20px;
+}
+li {
+	background-position: 100% .4em;
+	padding-right: .6em;
+	margin: 1em 0;
+}
+</style>
+</head>
+<body>
+	<header>
+		<h2 th:text="${studentgrade.student.studentName}">Name</h2>
+		<div align="right"><a href="/home">
+			<input type="button" class="button" value="Logout" />
+			</a>
+		</div>
+	</header>
+	<section>
+		<nav>
+			<ul>
+				<li><a href="/students/grades">Grades</a></li>
+				<li></li>
+				<li><a href="/students/availableCourse">Available Course</a></li>
+				<li></li>
+				<li><a href="/students/enrolledCourse">Enroll Course</a></li>
+			</ul>
+		</nav>
+
+
+		<h3 align="center">semester <span th:text="${studentgrade.semester}">Semester</span></h3>
+
+
+		<table align="center">
+			<tr>
+				<th >Course Id</th>
+				<th >Courses</th>
+				<th >Units</th>
+				<th >Grade</th>
+			</tr>
+			<tr>
+				<td ></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr th:text="${studentgrade.course.courseName}">
+				<td ></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr th:text="${studentgrade.course.courseUnit}">
+				<td ></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr th:text="${studentgrade.course.courseCode}">
+				<td ></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr th:text="${studentgrade.grade}">
+				<td ></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+
+	</section>
+
+	<footer>
+		<p>Webmaster Information</p>
+	</footer>
+
+</body>
+</html>

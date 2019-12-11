@@ -70,11 +70,6 @@ public class StudentGrade {
 		this.student = student;
 	}
 
-	@Override
-	public String toString() {
-		return "StudentGrade [id=" + id + ", grade=" + grade + ", semester=" + semester + ", course=" + course
-				+ ", student=" + student + "]";
-	}
 
 	
 	

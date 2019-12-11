@@ -14,6 +14,7 @@ public class Student {
 	private String mobile;
 	
 
+
 	public Student() {
 		super();
 		// TODO Auto-generated constructor stub
@@ -68,11 +69,7 @@ public class Student {
 	}
 
 
-	@Override
-	public String toString() {
-		return "Student [studentId=" + studentId + ", studentName=" + studentName + ", gender=" + gender + ", degree="
-				+ degree + ", semester=" + semester + ", mobile=" + mobile + "]";
-	}
+	
 	
 	
 	
